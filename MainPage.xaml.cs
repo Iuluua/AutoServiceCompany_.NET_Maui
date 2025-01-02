@@ -9,16 +9,16 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+
+        private async void OnNavigateToClients(object sender, EventArgs e)
         {
-            count++;
+            //await Shell.Current.GoToAsync("//ClientsPage");
+            if (true) { var da = "da"; }
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private async void OnNavigateToAbout(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//AboutPage");
         }
     }
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MelisaIuliaProiect.AboutPage"
+             Title="AboutPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="10">
+            <Label Text="About Our Application"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="This application helps manage clients, departments, and city data efficiently."
+                   FontSize="16"
+                   HorizontalOptions="Center"/>
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10">
+                <StackLayout>
+                    <Label Text="Client Details" FontAttributes="Bold" FontSize="18"/>
+                    <Label x:Name="ClientDetails" Text="Number of Clients: 250"/>
+                    <Label Text="Active Clients: 200"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10">
+                <StackLayout>
+                    <Label Text="City Coverage" FontAttributes="Bold" FontSize="18"/>
+                    <Label x:Name="CityCoverage" Text="Number of Cities: 15"/>
+                    <Label Text="Main City: Cluj-Napoca"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10">
+                <StackLayout>
+                    <Label Text="Departments Overview" FontAttributes="Bold" FontSize="18"/>
+                    <Label x:Name="DepartmentsOverview" Text="Departments: Sales, Service, Administration"/>
+                    <Label Text="Primary Department: Sales"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

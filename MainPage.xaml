@@ -1,36 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MelisaIuliaProiect.MainPage">
+             x:Class="MelisaIuliaProiect.MainPage"
+             Title="Home"
+             BackgroundColor="#E1E1E1">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+            Padding="20"
+            Spacing="25"
+            BackgroundColor="#FFFFFF">
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            <Frame BackgroundColor="#512BD4"
+                   CornerRadius="10"
+                   Padding="15">
+                <Label Text="Welcome to MelisaIuliaProiect"
+                       TextColor="#FFFFFF"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+            </Frame>
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            <Image Source="main_page.png"
+                   HeightRequest="150"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   SemanticProperties.Description="Dot net bot image" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+            <Frame BackgroundColor="#DFD8F7"
+                   CornerRadius="8"
+                   Padding="15"
+                   BorderColor="#919191">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Quick Overview"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#242424"
+                           HorizontalOptions="Center"/>
+
+                    <HorizontalStackLayout Spacing="20"
+                                            HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="Clients"
+                                   FontSize="14"
+                                   TextColor="#404040"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="250"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#512BD4"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="Cities"
+                                   FontSize="14"
+                                   TextColor="#404040"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="15"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#512BD4"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="Departments"
+                                   FontSize="14"
+                                   TextColor="#404040"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="3"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#512BD4"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <VerticalStackLayout Spacing="15">
+                <Button Text="Go to Clients"
+                        BackgroundColor="#512BD4"
+                        TextColor="#FFFFFF"
+                        CornerRadius="8"
+                        Clicked="OnNavigateToClients"/>
+
+                <Button Text="Go to About Page"
+                        BackgroundColor="#2B0B98"
+                        TextColor="#FFFFFF"
+                        CornerRadius="8"
+                        Clicked="OnNavigateToAbout"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
