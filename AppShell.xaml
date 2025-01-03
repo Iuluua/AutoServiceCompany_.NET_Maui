@@ -18,6 +18,12 @@
         <Tab Title="Departments">
             <ShellContent ContentTemplate="{DataTemplate local:DepartmentEntryPage}" Route="DepartmentEntryPage" />
         </Tab>
+        <Tab Title="Cities">
+            <ShellContent ContentTemplate="{DataTemplate local:CityEntryPage}" Route="CityEntryPage" />
+        </Tab>
+        <Tab Title="Clients">
+            <ShellContent ContentTemplate="{DataTemplate local:ClientEntryPage}" Route="ClientEntryPage" />
+        </Tab>
     </TabBar>
 
 </Shell>

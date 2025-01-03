@@ -45,7 +45,8 @@
                                    FontSize="14"
                                    TextColor="#404040"
                                    HorizontalOptions="Center"/>
-                            <Label Text="250"
+                            <Label x:Name="ClientsCountLabel"
+                                   Text="Loading..."
                                    FontSize="18"
                                    FontAttributes="Bold"
                                    TextColor="#512BD4"
@@ -57,7 +58,8 @@
                                    FontSize="14"
                                    TextColor="#404040"
                                    HorizontalOptions="Center"/>
-                            <Label Text="15"
+                            <Label x:Name="CitiesCountLabel"
+                                   Text="Loading..."
                                    FontSize="18"
                                    FontAttributes="Bold"
                                    TextColor="#512BD4"
@@ -93,11 +95,17 @@
                         CornerRadius="8"
                         Clicked="OnNavigateToClients"/>
 
-                <Button Text="Go to Department"
+                <Button Text="Go to Departments"
                         BackgroundColor="#512BD4"
                         TextColor="#FFFFFF"
                         CornerRadius="8"
                         Clicked="OnNavigateToDepartments"/>
+
+                <Button Text="Go to Cities"
+                        BackgroundColor="#512BD4"
+                        TextColor="#FFFFFF"
+                        CornerRadius="8"
+                        Clicked="OnNavigateToCities"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

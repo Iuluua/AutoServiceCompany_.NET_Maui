@@ -21,13 +21,13 @@ public partial class DepartmentPage : ContentPage
     }
 
     async void OnDeleteButtonClicked(object sender, EventArgs e)
-    {
-        var department = (Department)BindingContext;
-
-        if (department != null)
         {
-            await App.Database.DeleteDepartmentAsync(department);
-            await Navigation.PopAsync();
+            var department = (Department)BindingContext;
+
+            if (department != null)
+            {
+                await App.Database.DeleteDepartmentAsync(department);
+                await Navigation.PopAsync();
+            }
         }
-    }
 }

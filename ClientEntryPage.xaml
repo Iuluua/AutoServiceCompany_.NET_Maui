@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MelisaIuliaProiect.ClientEntryPage"
+             Title="ClientEntryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Client"
+                     Clicked="OnClientAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="clientListView"
+              Margin="20"
+              ItemSelected="OnClientItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Nume}"
+                          Detail="{Binding Email}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
