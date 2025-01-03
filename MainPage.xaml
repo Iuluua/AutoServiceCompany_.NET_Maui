@@ -25,7 +25,7 @@
                    HeightRequest="150"
                    Aspect="AspectFit"
                    HorizontalOptions="Center"
-                   SemanticProperties.Description="Dot net bot image" />
+                   SemanticProperties.Description="Main Page image" />
 
             <Frame BackgroundColor="#DFD8F7"
                    CornerRadius="8"
@@ -69,7 +69,8 @@
                                    FontSize="14"
                                    TextColor="#404040"
                                    HorizontalOptions="Center"/>
-                            <Label Text="3"
+                            <Label x:Name="DepartmentsCountLabel"
+                                   Text="Loading..."
                                    FontSize="18"
                                    FontAttributes="Bold"
                                    TextColor="#512BD4"
@@ -80,17 +81,23 @@
             </Frame>
 
             <VerticalStackLayout Spacing="15">
+                <Button Text="Go to About Page"
+                        BackgroundColor="#2B0B98"
+                        TextColor="#FFFFFF"
+                        CornerRadius="8"
+                        Clicked="OnNavigateToAbout"/>
+
                 <Button Text="Go to Clients"
                         BackgroundColor="#512BD4"
                         TextColor="#FFFFFF"
                         CornerRadius="8"
                         Clicked="OnNavigateToClients"/>
 
-                <Button Text="Go to About Page"
-                        BackgroundColor="#2B0B98"
+                <Button Text="Go to Department"
+                        BackgroundColor="#512BD4"
                         TextColor="#FFFFFF"
                         CornerRadius="8"
-                        Clicked="OnNavigateToAbout"/>
+                        Clicked="OnNavigateToDepartments"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

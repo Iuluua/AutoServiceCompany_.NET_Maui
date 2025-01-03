@@ -15,6 +15,9 @@
         <Tab Title="About">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" Route="AboutPage" />
         </Tab>
+        <Tab Title="Departments">
+            <ShellContent ContentTemplate="{DataTemplate local:DepartmentEntryPage}" Route="DepartmentEntryPage" />
+        </Tab>
     </TabBar>
 
 </Shell>
