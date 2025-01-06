@@ -23,6 +23,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
             <Button Text="Save"
@@ -31,6 +32,11 @@
             <Button Grid.Column="1"
                 Text="Delete"
                 Clicked="OnDeleteButtonClicked" />
+
+
+            <Button Grid.Column="2"
+                    Text="Show on Map"
+                    Clicked="OnShowMapButtonClicked" />
         </Grid>
     </StackLayout>
 </ContentPage>
